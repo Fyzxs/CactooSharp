@@ -1,14 +1,14 @@
-using CactooSharp.Iterable;
+using System.Collections.Generic;
 
 namespace CactooSharp.Texts
 {
-    //Understands joining Texts
+    //Understands joining Texts on demand
     public class JoinedText : Text
     {
         private readonly Text _delimiter;
-        private readonly IterableOf<Text> _values;
+        private readonly IEnumerable<Text> _values;
 
-        public JoinedText(Text delimiter, IterableOf<Text> values)
+        public JoinedText(Text delimiter, IEnumerable<Text> values)
         {
             _delimiter = delimiter;
             _values = values;

@@ -3,6 +3,7 @@ using CactooSharp.Iterable;
 using CactooSharp.Texts;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace CactooSharp.Tests.Texts
 {
@@ -26,6 +27,12 @@ namespace CactooSharp.Tests.Texts
         public void ShouldHaveValueFromToString()
         {
             new JoinedText(" ".ToText(), new IterableOf<Text>("string".ToText(), "value".ToText())).ToString().Should().Be("string value");
+        }
+
+        [TestMethod]
+        public void ShouldHaveExtensionMethodForListOfStrings()
+        {
+            new List<string> { "a", "b", "c" }.JoinedText(", ").Should.Be("a, b, c");
         }
     }
 }

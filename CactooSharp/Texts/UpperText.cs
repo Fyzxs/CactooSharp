@@ -3,6 +3,7 @@ using System.Globalization;
 
 namespace CactooSharp.Texts
 {
+    //Understands upper casing on demand
     public class UpperText : Text
     {
         private readonly Text _value;

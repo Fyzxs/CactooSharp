@@ -43,12 +43,13 @@
     <Compile Include="AsValue.cs" />
     <Compile Include="Booleans\BooleanValue.cs" />
     <Compile Include="Booleans\IsNull.cs" />
+    <Compile Include="Extensions\LowerTextExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Iterable\IterableOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scalar.cs" />
     <Compile Include="Texts\Text.cs" />
-    <Compile Include="Extensions\TextExtensions.cs" />
+    <Compile Include="Extensions\UpperTextExtensions.cs" />
     <Compile Include="Texts\JoinedText.cs" />
     <Compile Include="Texts\TextOf.cs" />
     <Compile Include="Texts\LowerText.cs" />

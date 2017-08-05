@@ -3,6 +3,7 @@ using System.Globalization;
 
 namespace CactooSharp.Texts
 {
+    //Understands lower casing on demand
     public class LowerText : Text
     {
         private readonly Text _value;
