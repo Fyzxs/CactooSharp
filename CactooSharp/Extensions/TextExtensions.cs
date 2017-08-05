@@ -5,11 +5,11 @@ namespace CactooSharp.Extensions
 {
     public static class TextExtensions
     {
-        public static Text ToLower(this Text text) => new ToLower(text);
-        public static Text ToLower(this Text text, CultureInfo cultureInfo) => new ToLower(text, cultureInfo);
+        public static Text LowerText(this Text text) => new LowerText(text);
+        public static Text LowerText(this Text text, CultureInfo cultureInfo) => new LowerText(text, cultureInfo);
 
-        public static Text ToUpper(this Text text) => new ToUpper(text);
-        public static Text ToUpper(this Text text, CultureInfo cultureInfo) => new ToUpper(text, cultureInfo);
+        public static Text UpperText(this Text text) => new UpperText(text);
+        public static Text UpperText(this Text text, CultureInfo cultureInfo) => new UpperText(text, cultureInfo);
 
     }
 }

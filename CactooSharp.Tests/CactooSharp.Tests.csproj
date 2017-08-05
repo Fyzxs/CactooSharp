@@ -65,8 +65,8 @@
     <Compile Include="Iterable\IterableOfTests.cs" />
     <Compile Include="Iterable\MappedTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Texts\ToLowerTests.cs" />
-    <Compile Include="Texts\ToUpperTests.cs" />
+    <Compile Include="Texts\LowerTextTests.cs" />
+    <Compile Include="Texts\UpperTextTests.cs" />
     <Compile Include="Booleans\IsNullTests.cs" />
     <Compile Include="Booleans\BooleanValueTests.cs" />
     <Compile Include="Texts\TextOfTests.cs" />

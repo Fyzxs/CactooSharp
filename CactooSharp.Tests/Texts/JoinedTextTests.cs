@@ -1,4 +1,7 @@
-﻿using FluentAssertions;
+﻿using CactooSharp.Extensions;
+using CactooSharp.Iterable;
+using CactooSharp.Texts;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CactooSharp.Tests.Texts
@@ -9,28 +12,20 @@ namespace CactooSharp.Tests.Texts
         [TestMethod]
         public void ShouldReturnSingleWord()
         {
-            Text text = new JoinedText("", new IterableOf<string>("Foo"));
+            Text text = new JoinedText("".ToText(), new IterableOf<Text>("Foo".ToText()));
             text.Value().Should().Be("Foo");
         }
+
         [TestMethod]
         public void ShouldReturnJoinedWords2()
         {
-            Text text = new JoinedText(" ", new IterableOf<string>("Foo", "Bar"));
+            Text text = new JoinedText(" ".ToText(), new IterableOf<Text>("Foo".ToText(), "Bar".ToText()));
             text.Value().Should().Be("Foo Bar");
         }
-    }
-
-    public class JoinedText : Text
-    {
-        private readonly string _delimiter;
-        private readonly IterableOf<string> _values;
-
-        public JoinedText(string delimiter, IterableOf<string> values)
+        [TestMethod]
+        public void ShouldHaveValueFromToString()
         {
-            _delimiter = delimiter;
-            _values = values;
+            new JoinedText(" ".ToText(), new IterableOf<Text>("string".ToText(), "value".ToText())).ToString().Should().Be("string value");
         }
-
-        public string Value() => string.Join(_delimiter, _values);
     }
 }

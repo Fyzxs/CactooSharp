@@ -6,6 +6,6 @@
 
         public TextOf(string value) => _value = value;
 
-        public string Value() => _value;
+        public override string Value() => _value;
     }
 }

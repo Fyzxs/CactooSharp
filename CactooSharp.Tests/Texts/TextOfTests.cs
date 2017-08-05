@@ -1,4 +1,5 @@
-﻿using CactooSharp.Texts;
+﻿using CactooSharp.Extensions;
+using CactooSharp.Texts;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -10,8 +11,19 @@ namespace CactooSharp.Tests.Texts
         [TestMethod]
         public void ShouldHaveTextOfString()
         {
-            Text text = new TextOf("string value");
-            text.Value().Should().Be("string value");
+            new TextOf("string value").Value().Should().Be("string value");
+        }
+
+        [TestMethod]
+        public void ShouldHaveValueFromToString()
+        {
+            new TextOf("string value").ToString().Should().Be("string value");
+        }
+
+        [TestMethod]
+        public void ShouldHaveExtensionMethodFromString()
+        {
+            "string GOES here".ToText().Value().Should().Be("string GOES here");
         }
     }
 }
