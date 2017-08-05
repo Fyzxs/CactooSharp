@@ -1,5 +1,6 @@
 ﻿namespace CactooSharp.Booleans
 {
+    //Understands object based boolean-ness
     public class BooleanValue
     {
         private readonly string _value;

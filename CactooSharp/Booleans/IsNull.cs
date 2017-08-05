@@ -1,5 +1,6 @@
 ﻿namespace CactooSharp.Booleans
 {
+    //Understands if a scalar is null
     public class IsNull<T> where T : class
     {
         private readonly Scalar<T> _origin;
