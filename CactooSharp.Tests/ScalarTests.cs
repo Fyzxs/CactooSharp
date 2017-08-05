@@ -54,7 +54,7 @@ namespace CactooSharp.Tests
         }
     }
 
-    //Understands holding onto a value
+    //Understands getting a value from an object
     public interface Scalar<out T> where T : class
     {
         T Value();
