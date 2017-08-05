@@ -68,6 +68,7 @@
     <Compile Include="Booleans\IsNullTests.cs" />
     <Compile Include="Booleans\BooleanValueTests.cs" />
     <Compile Include="Texts\TextOfTests.cs" />
+    <Compile Include="Texts\JoinedTextTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
