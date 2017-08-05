@@ -2,6 +2,7 @@ using CactooSharp.Iterable;
 
 namespace CactooSharp.Texts
 {
+    //Understands joining Texts
     public class JoinedText : Text
     {
         private readonly Text _delimiter;

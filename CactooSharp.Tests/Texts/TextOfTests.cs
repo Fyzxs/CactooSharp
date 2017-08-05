@@ -25,5 +25,17 @@ namespace CactooSharp.Tests.Texts
         {
             "string GOES here".ToText().Value().Should().Be("string GOES here");
         }
+
+        [TestMethod]
+        public void ShouldHaveTextOfReturnTextOfObject()
+        {
+            Text text = "string GOES here".ToText().TextOf();
+            text.Should().BeOfType<TextOf>();
+        }
+        [TestMethod]
+        public void ShouldHaveTextOfBeOfProvidedValue()
+        {
+            "string GOES here".ToText().TextOf().Value().Should().Be("string GOES here");
+        }
     }
 }
