@@ -8,8 +8,6 @@ namespace CactooSharp.Texts
         private readonly Text _value;
         private readonly CultureInfo _cultureInfo;
 
-        public ToUpper(string value) : this(new TextOf(value)) { }
-
         public ToUpper(Text value) : this(value, new CultureInfo("en-US")) { }
 
         public ToUpper(Text value, CultureInfo cultureInfo)

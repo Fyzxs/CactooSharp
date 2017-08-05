@@ -10,13 +10,7 @@ namespace CactooSharp.Tests.Texts
         [TestMethod]
         public void ShouldReturnUpperNullForNull()
         {
-            new ToUpper((string)null).Value().Should().Be("NULL");
-        }
-
-        [TestMethod]
-        public void ShouldReturnAllCapsForString()
-        {
-            new ToUpper("String GOES here").Value().Should().Be("STRING GOES HERE");
+            new ToUpper(null).Value().Should().Be("NULL");
         }
 
         [TestMethod]

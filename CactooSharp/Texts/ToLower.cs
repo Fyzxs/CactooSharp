@@ -8,8 +8,6 @@ namespace CactooSharp.Texts
         private readonly Text _value;
         private readonly CultureInfo _cultureInfo;
 
-        public ToLower(string value) : this(new TextOf(value)) { }
-
         public ToLower(Text value) : this(value, new CultureInfo("en-US")) { }
 
         public ToLower(Text value, CultureInfo cultureInfo)
