@@ -36,6 +36,7 @@ namespace CactooSharp.Tests
         }
     }
 
+    //Understands checking a scalar for null
     public class NoNulls<T> : Scalar<T> where T : class
     {
         private readonly Scalar<T> _origin;
@@ -53,7 +54,7 @@ namespace CactooSharp.Tests
         }
     }
 
-    // ReSharper disable once InconsistentNaming
+    //Understands holding onto a value
     public interface Scalar<out T> where T : class
     {
         T Value();
