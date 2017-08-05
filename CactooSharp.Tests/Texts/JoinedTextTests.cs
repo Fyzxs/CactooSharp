@@ -9,14 +9,13 @@ namespace CactooSharp.Tests.Texts
         [TestMethod]
         public void ShouldReturnSingleWord()
         {
-            Text text = new JoinedText("", "Foo");
+            Text text = new JoinedText("", new IterableOf<string>("Foo"));
             text.Value().Should().Be("Foo");
         }
-
         [TestMethod]
-        public void ShouldReturnJoinedWords()
+        public void ShouldReturnJoinedWords2()
         {
-            Text text = new JoinedText(" ", "Foo", "Bar");
+            Text text = new JoinedText(" ", new IterableOf<string>("Foo", "Bar"));
             text.Value().Should().Be("Foo Bar");
         }
     }
@@ -24,18 +23,14 @@ namespace CactooSharp.Tests.Texts
     public class JoinedText : Text
     {
         private readonly string _delimiter;
-        private readonly string[] _values;
+        private readonly IterableOf<string> _values;
 
-
-        public JoinedText(string delimiter, params string[] values)
+        public JoinedText(string delimiter, IterableOf<string> values)
         {
             _delimiter = delimiter;
             _values = values;
         }
 
-        public string Value()
-        {
-            return string.Join(_delimiter, _values);
-        }
+        public string Value() => string.Join(_delimiter, _values);
     }
 }
