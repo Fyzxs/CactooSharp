@@ -1,5 +1,3 @@
-using CactooSharp.Extensions;
-
 namespace CactooSharp.Texts
 {
     //Understands a string in a scalar
@@ -10,6 +8,6 @@ namespace CactooSharp.Texts
 
         public override string ToString() => Value();
 
-        public Text TextOf() => Value().ToText();
+        public Text TextOf() => new TextOf(Value());
     }
 }

@@ -9,6 +9,8 @@ namespace CactooSharp.Texts
         private readonly Text _value;
         private readonly CultureInfo _cultureInfo;
 
+        public LowerText(string value) : this(new TextOf(value)) { }
+        public LowerText(string value, CultureInfo cultureInfo) : this(new TextOf(value), cultureInfo) { }
         public LowerText(Text value) : this(value, new CultureInfo("en-US")) { }
 
         public LowerText(Text value, CultureInfo cultureInfo)
