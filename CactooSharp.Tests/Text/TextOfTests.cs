@@ -21,4 +21,19 @@ namespace CactooSharp.Tests.Text
             value.AsValue().Should().Be("Some Value Here");
         }
     }
+
+    public interface Text
+    {
+        string AsString();
+    }
+
+    public class SampleText : Text
+    {
+        private readonly Scalar<string> _value;
+        public SampleText(string value) : this(new NotNull<string>(new Value<string>(value))) { }
+
+        private SampleText(Scalar<string> value) => _value = value;
+
+        public string AsString() => _value.AsValue();
+    }
 }
