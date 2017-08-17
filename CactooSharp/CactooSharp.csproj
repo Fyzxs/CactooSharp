@@ -45,6 +45,7 @@
     <Compile Include="Scalars\NotNull.cs" />
     <Compile Include="Scalars\ValueItem.cs" />
     <Compile Include="Text.cs" />
+    <Compile Include="Texts\DelayedText.cs" />
     <Compile Include="Texts\IsWhiteSpace.cs" />
     <Compile Include="Texts\NotNull.cs" />
     <Compile Include="Texts\TextOf.cs" />
