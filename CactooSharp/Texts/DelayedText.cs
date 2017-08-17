@@ -7,6 +7,6 @@ namespace CactooSharp.Texts {
 
         public DelayedText(Func<string> func) => _func = func;
 
-        public string AsString() => _func.Invoke();
+        public string String() => _func.Invoke();
     }
 }

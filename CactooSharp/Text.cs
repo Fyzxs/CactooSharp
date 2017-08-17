@@ -2,6 +2,6 @@
 {
     public interface Text
     {
-        string AsString();
+        string String();
     }
 }

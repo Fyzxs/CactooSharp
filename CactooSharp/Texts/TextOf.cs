@@ -1,3 +1,4 @@
+using System.IO;
 using System.Text;
 
 namespace CactooSharp.Texts
@@ -13,6 +14,8 @@ namespace CactooSharp.Texts
 
         public TextOf(Text origin) => _origin = origin;
 
-        public string AsString() => _origin.AsString();
+        public TextOf(Stream origin) : this(new DelayedText(() => new StreamReader(origin).ReadToEnd())) { }
+
+        public string String() => _origin.String();
     }
 }

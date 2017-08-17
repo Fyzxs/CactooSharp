@@ -13,13 +13,13 @@ namespace CactooSharp.Tests.Texts
         {
             Text text = new TextOf("val");
             Text notNull = new NotNull(text);
-            notNull.AsString().Should().Be("val");
+            notNull.String().Should().Be("val");
         }
         [TestMethod]
         public void ShouldThrowExceptionForNullText()
         {
             Text notNull = new NotNull(null);
-            Action action = () => notNull.AsString();
+            Action action = () => notNull.String();
             action.ShouldThrowExactly<Exception>().WithMessage("NULL instead of a valid text");
         }
         [TestMethod]
@@ -27,7 +27,7 @@ namespace CactooSharp.Tests.Texts
         {
             Text text = new TextOf((string)null);
             Text notNull = new NotNull(text);
-            Action action = () => notNull.AsString();
+            Action action = () => notNull.String();
             action.ShouldThrowExactly<Exception>().WithMessage("NULL instead of a valid result string");
         }
     }

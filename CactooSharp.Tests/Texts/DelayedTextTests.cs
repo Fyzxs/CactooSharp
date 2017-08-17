@@ -13,7 +13,7 @@ namespace CactooSharp.Tests.Texts
         public void ShouldReturnStringFromDelayed()
         {
             Text delayed = new DelayedText(() => "Don't Care");
-            delayed.AsString().Should().Be("Don't Care");
+            delayed.String().Should().Be("Don't Care");
         }
 
         [TestMethod]
@@ -21,7 +21,7 @@ namespace CactooSharp.Tests.Texts
         {
             Text delayed = new DelayedText(() => throw new IOException("deal with it"));
 
-            ((Action)(() => delayed.AsString())).ShouldThrowExactly<IOException>().WithMessage("deal with it");
+            ((Action)(() => delayed.String())).ShouldThrowExactly<IOException>().WithMessage("deal with it");
         }
     }
 }

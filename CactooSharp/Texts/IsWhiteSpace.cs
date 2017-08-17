@@ -9,6 +9,6 @@ namespace CactooSharp.Texts
 
         public IsWhiteSpace(Text origin) => _origin = origin;
 
-        public bool Value() => _origin.AsString().All(char.IsWhiteSpace);
+        public bool Value() => _origin.String().All(char.IsWhiteSpace);
     }
 }

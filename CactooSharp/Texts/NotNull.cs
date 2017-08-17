@@ -9,11 +9,11 @@ namespace CactooSharp.Texts
 
         public NotNull(Text origin) => _origin = origin;
 
-        public string AsString()
+        public string String()
         {
             if (_origin == null) throw new Exception("NULL instead of a valid text");
-            if (_origin.AsString() == null) throw new Exception("NULL instead of a valid result string");
-            return _origin.AsString();
+            if (_origin.String() == null) throw new Exception("NULL instead of a valid result string");
+            return _origin.String();
         }
     }
 }
