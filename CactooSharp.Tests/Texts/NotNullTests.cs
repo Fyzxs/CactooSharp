@@ -1,0 +1,34 @@
+﻿using CactooSharp.Texts;
+using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+namespace CactooSharp.Tests.Texts
+{
+    [TestClass]
+    public class NotNullTests
+    {
+        [TestMethod]
+        public void ShouldReturnInputAsString()
+        {
+            Text text = new TextOf("val");
+            Text notNull = new NotNull(text);
+            notNull.AsString().Should().Be("val");
+        }
+        [TestMethod]
+        public void ShouldThrowExceptionForNullText()
+        {
+            Text notNull = new NotNull(null);
+            Action action = () => notNull.AsString();
+            action.ShouldThrowExactly<Exception>().WithMessage("NULL instead of a valid text");
+        }
+        [TestMethod]
+        public void ShouldThrowExceptionForNullTextValue()
+        {
+            Text text = new TextOf((string)null);
+            Text notNull = new NotNull(text);
+            Action action = () => notNull.AsString();
+            action.ShouldThrowExactly<Exception>().WithMessage("NULL instead of a valid result string");
+        }
+    }
+}

@@ -57,9 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scalar\NotNullTests.cs" />
-    <Compile Include="Scalar\ValueScalarTests.cs" />
-    <Compile Include="Text\TextOfTests.cs" />
+    <Compile Include="Scalars\NotNullTests.cs" />
+    <Compile Include="Scalars\ValueItemTests.cs" />
+    <Compile Include="Texts\IsWhiteSpaceTests.cs" />
+    <Compile Include="Texts\TextOfTests.cs" />
+    <Compile Include="Texts\NotNullTests.cs" />
+    <Compile Include="Texts\DelayedTextTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CactooSharp\CactooSharp.csproj">

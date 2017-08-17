@@ -1,19 +1,19 @@
-﻿using CactooSharp.Scalar;
+﻿using CactooSharp.Scalars;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CactooSharp.Tests.Scalar
+namespace CactooSharp.Tests.Scalars
 {
     [TestClass]
-    public class ValueScalarTests
+    public class ValueItemTests
     {
         [TestMethod]
         public void ValueShouldReturnSameReference()
         {
             object obj = new object();
-            Scalar<object> scalar = new Value<object>(obj);
+            Scalar<object> scalar = new ValueItem<object>(obj);
 
-            scalar.AsValue().Should().Be(obj);
+            scalar.Value().Should().Be(obj);
         }
     }
 }

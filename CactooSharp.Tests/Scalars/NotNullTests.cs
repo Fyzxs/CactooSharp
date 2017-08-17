@@ -1,9 +1,9 @@
-﻿using CactooSharp.Scalar;
+﻿using CactooSharp.Scalars;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace CactooSharp.Tests.Scalar
+namespace CactooSharp.Tests.Scalars
 {
     [TestClass]
     public class NotNullTests
@@ -11,8 +11,8 @@ namespace CactooSharp.Tests.Scalar
         [TestMethod]
         public void ValueShouldThrowExceptionGivenNullValue()
         {
-            Scalar<object> scalar = new NotNull<object>(new Value<object>(null));
-            Action action = () => scalar.AsValue();
+            Scalar<object> scalar = new NotNull<object>(new ValueItem<object>(null));
+            Action action = () => scalar.Value();
             action.ShouldThrow<Exception>().WithMessage("NULL instead of valid value");
         }
 
@@ -20,7 +20,7 @@ namespace CactooSharp.Tests.Scalar
         public void ValueShouldThrowExceptionGivenNullScalar()
         {
             Scalar<object> scalar = new NotNull<object>(null);
-            Action action = () => scalar.AsValue();
+            Action action = () => scalar.Value();
             action.ShouldThrow<Exception>().WithMessage("NULL instead of valid scalar");
         }
 
@@ -29,7 +29,7 @@ namespace CactooSharp.Tests.Scalar
         {
             object actual = new object();
             Scalar<object> scalar = new NotNull<object>(actual);
-            object expected = scalar.AsValue();
+            object expected = scalar.Value();
             expected.Should().BeSameAs(actual);
 
         }

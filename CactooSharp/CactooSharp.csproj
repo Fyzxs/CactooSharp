@@ -42,9 +42,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scalar.cs" />
-    <Compile Include="Scalar\NotNull.cs" />
-    <Compile Include="Scalar\Value.cs" />
-    <Compile Include="Text\TextOf.cs" />
+    <Compile Include="Scalars\NotNull.cs" />
+    <Compile Include="Scalars\ValueItem.cs" />
+    <Compile Include="Text.cs" />
+    <Compile Include="Texts\IsWhiteSpace.cs" />
+    <Compile Include="Texts\NotNull.cs" />
+    <Compile Include="Texts\TextOf.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
